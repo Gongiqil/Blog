@@ -6,11 +6,11 @@
         <div class="home-about-img">
             <img src="images/icon.jpg" alt=""></div>
         <div class="home-about-text1">
-            <b><%= locals.user.nickname %></b>
-            <p><%= locals.user.position %></p>
-            <p><%= locals.user.other %></p>
+            <b><%= locals.loginUser?locals.loginUser.nickname:'nickname' %></b>
+            <p><%= locals.loginUser?locals.loginUser.position:'position' %></p>
+            <p><%= locals.loginUser?locals.loginUser.other:'other' %></p>
         </div>
-        <div class="home-about-text2">个人签名：<%= locals.user.signature %></div>
+        <div class="home-about-text2">个人签名：<%= locals.loginUser?locals.loginUser.signature:'自由并不是放纵,那是火一般的梦想' %></div>
     </div>
     <!-- 精选文章 -->
     <div class="home-selected excerpt-minic">

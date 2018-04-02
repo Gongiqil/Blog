@@ -13,6 +13,9 @@ const UserController = {
     login: (req, res, next) => {
         let username = req.body.username;
         let password = req.body.password;
+        /*User.creat({username: username},{password:md5(password)}).then(document => {
+            console.log(document)
+        }*/
         User.findOne({username: username}).then(document => {
             let user = document;
             if (user) {
